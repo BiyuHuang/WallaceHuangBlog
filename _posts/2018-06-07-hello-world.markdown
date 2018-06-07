@@ -7,4 +7,4 @@ img:  # Add image post (optional)
 ---
 # Hello Wrold
 
-I'm Biyu Huang, Nice to meet you! This is my first blog on git-pages, so it's very simple and less context. I'm sorry for that, guys.
+I'm Biyu Huang, Nice to meet you! This is my first blog, so it's very simple.Sorry for that, guys.
