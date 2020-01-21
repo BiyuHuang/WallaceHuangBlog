@@ -1,17 +1,14 @@
 title: Wallace Huang
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: Blog # > this means to ignore newlines until "baseurl:"
 permalink: ':title/'
 baseurl: "/WallaceHuangBlog" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://biyuhuang.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Biyu Huang # add your name
 author-img: wallace_huang.jpg # add your photo
-about-author: Big Data development engineer. Go big or go home! # add description
+about-author: R&D engineer. Go big or go home! # add description
 social-twitter: h417652303 # add your Twitter handle
 social-facebook: huangbiyu # add your Facebook handle
 social-github: BiyuHuang # add your Github handle
@@ -22,7 +19,7 @@ social-email: h417652303@gmail.com # add your Email address
 # discus-identifier: wallacehuang # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: h417652303 # Google Analytics
 
 # Build Settings
 markdown: kramdown
@@ -36,4 +33,4 @@ paginate_path: "/page/:num"
 
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
 
-theme: jekyll-theme-hacker
+theme: jekyll-theme-midnight #jekyll-theme-hacker
