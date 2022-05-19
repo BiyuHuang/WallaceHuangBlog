@@ -1,4 +1,2 @@
 # WallaceHuangBlog
-WallaceHuangBlog
-
-https://biyuhuang.github.io/blog/
+[Blog](https://biyuhuang.github.io/WallaceHuangBlog/)
