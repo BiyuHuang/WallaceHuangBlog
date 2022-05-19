@@ -445,13 +445,14 @@ template {
 }
 
 .highlighter-rouge {
+  background-color: #404040;
   color: #ce887b;
   font-weight: 400;
   border: 1px solid #607D8B;
   -webkit-border-radius: 3px;
           border-radius: 3px;
   padding: 0.1rem 0.5rem;
-  background-color: #404040;
+
 }
 
 .highlight .hll {
@@ -891,7 +892,7 @@ table tfoot td {
 }
 
 .post, .article-page {
-  background-color: #1B1D1E; /* FAFAFA 1B1D1E */
+  background-color: #1B1D1E; /* FAFAFA */
 }
 
 ::-moz-selection {
@@ -1278,11 +1279,11 @@ a.newer-posts:hover {
 .page-footer .page-share a {
   display: inline-block;
   text-decoration: none;
-  background-color: #263959; /* AAA59E 263959 */
-  border: 1px solid #ecf0f1;
+  background-color: #1B1D1E; /* 1B1D1E 263959 */
+  border: 1px solid #AFAFAF;
   padding: 5px 10px;
   margin-left: 5px;
-  color: #fafafa; /* fafafa */
+  color: #AFAFAF; /* fafafa */
   font-size: 12px;
   -webkit-transition: background-color .3s;
   -o-transition: background-color .3s;
@@ -1294,7 +1295,7 @@ a.newer-posts:hover {
 }
 
 .page-footer .page-share a:hover {
-  background-color: #263959; /* ecf0f1 */
+  background-color: #404040; /* 404040 ecf0f1 */
 }
 
 .page-footer .page-tag a {
