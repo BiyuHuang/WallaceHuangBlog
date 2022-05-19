@@ -775,7 +775,7 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   color: #515151;
-  background-color: #fbfbfb;
+  background-color: #F0F0F0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -889,17 +889,17 @@ table tfoot td {
 }
 
 .post, .article-page {
-  background-color: #fff;
+  background-color: #FAFAFA;
 }
 
 ::-moz-selection {
   background: rgba(38, 57, 89, 0.8);
-  color: #ffffff;
+  color: #FAFAFA;
 }
 
 ::selection {
   background: rgba(38, 57, 89, 0.8);
-  color: #ffffff;
+  color: #FAFAFA;
 }
 
 .clearfix::before, .clearfix::after {
@@ -933,7 +933,7 @@ table tfoot td {
   width: 240px;
   height: 100%;
   padding: 20px 10px;
-  background-color: #ffffff;
+  background-color: #209999;
 }
 
 .about {
@@ -942,8 +942,8 @@ table tfoot td {
 }
 
 .about .cover-author-image {
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 120px;
   margin: 0 auto 10px;
   -webkit-border-radius: 100%;
           border-radius: 100%;
@@ -1058,7 +1058,7 @@ table tfoot td {
   position: absolute;
   top: 50%;
   right: 0;
-  background-color: #515151;
+  background-color: #5F5F5F;
 }
 
 .contact ul {

@@ -31,5 +31,6 @@ Fork the ``master`` branch and delete ``gh-pages`` branch in it. This is importa
 GNU General Public License v3.0
 
 ### How to build / review site
+- ``bundle install``
 - ``bundle exec jekyll build``
 - ``bundle exec jekyll serve``
