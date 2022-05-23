@@ -7,24 +7,30 @@ img: # Add image post (optional)
 ---
 
 # Tips for command
-- git releated
-    - push
-    ```bash
-    git push origin YOUR_BRANCH # normal push commits
-    git purh origin YOUR_BRANCH --force # force option will rewrite commit history
-    ```
-    - merge-rebase
-    ```bash
-    fork_point=$(git merge-rebase --fork-point origin/master YOUR_BRANCH)
-    git rebase --onto origin/master $fork_point YOUR_BRANCH
-    ```
-    - rebase
-    ```bash
-    git rebase -i head~n # rebase form number n commits before head
-    git rebase -i --root # rebase from the root of BRANCH
-    ```
-- npm releated
-    - install
-    ```bash
-    npm install
-    ```
+- __git__ related
+    - `git push`
+      ```bash
+      git push origin YOUR_BRANCH # normal push commits
+      git push origin YOUR_BRANCH --force # force option will rewrite commit history
+      ```
+    - `git merge-rebase`
+      ```bash
+      fork_point=$(git merge-rebase --fork-point origin/master YOUR_BRANCH)
+      git rebase --onto origin/master $fork_point YOUR_BRANCH
+      ```
+    - `git rebase`
+      ```bash
+      git rebase -i head~n # rebase form number n commits before head
+      git rebase -i --root # rebase from the root of BRANCH
+      ```
+- __bash__ related
+    - `find`
+      ```bash
+      find . -maxdepth 5 -mindepth 2 -type f -name "*.csv" | xargs -n1 dirname | sort -u
+      find . -maxdepth 2 -type f -name "*.dat" -exec chmod 644 {} \;
+      ```
+- __npm__ related
+    - `install`
+      ```bash
+      npm install
+      ```
