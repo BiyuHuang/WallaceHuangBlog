@@ -2,7 +2,7 @@
 layout: post
 title: "程序员生涯的启航"
 date: 2018-06-30 21:54:45 +0800
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+description: start of career
 img:  # Add image post (optional)
 ---
 
