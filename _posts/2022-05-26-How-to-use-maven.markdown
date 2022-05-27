@@ -1,9 +1,8 @@
 ---
-layout: post 
-title: "How to use maven"
+layout: post title: "How to use maven"
 date: 2022-05-26 14:30:05 +0800 
 description: How to use maven 
-img: maven-logo-black-on-white.png
+img: maven-logo-black-on-white.png 
 tags: BigData
 ---
 
@@ -91,3 +90,25 @@ tags: BigData
    </project>
    ```
    [Reference documentation](https://davidb.github.io/scala-maven-plugin/example_java.html)
+2. Execute shell within maven project. Add `exec-maven-plugin` to `pom.xl`
+   ```xml
+   <plugin>
+        <artifactId>exec-maven-plugin</artifactId>
+        <groupId>org.codehaus.mojo</groupId>
+        <version>3.0.0</version>
+        <executions>
+            <execution>
+                 <id>exec-to-do-something</id>
+                 <phase>generate-sources</phase>
+                 <goals>
+                     <goal>exec</goal>
+                 </goals>
+                 <configuration>
+                     <executable>/bin/bash</executable>
+                     <commandlineArgs>${YOUR_SCRIPT_PATH}/xxx.sh</commandlineArgs>
+                     <skip>false</skip> <!-- when this option is set to true, xxx.sh wouldn't be executed. --> 
+                 </configuration>
+            </execution>
+        </executions>
+   </plugin>
+   ```
