@@ -1,5 +1,6 @@
 ---
-layout: post title: "How to use maven"
+layout: post 
+title: "How to use maven"
 date: 2022-05-26 14:30:05 +0800 
 description: How to use maven 
 img: maven-logo-black-on-white.png 
