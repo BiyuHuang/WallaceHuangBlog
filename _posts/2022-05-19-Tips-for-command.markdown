@@ -3,15 +3,17 @@ layout: post
 title: "Tips for command"
 date: 2022-05-19 14:35:05 +0800
 description: Tips for command
-img: # Add image post (optional)
+tags: BigData
+img:  # Add image post (optional)
 ---
 
 # Tips for command
+
 - __git__ related
     - ___git push___
       ```bash
       git push origin YOUR_BRANCH # normal push commits
-      git push origin YOUR_BRANCH --force # force option will rewrite commit history
+      git push origin YOUR_BRANCH --force # force option will rewrite commit history                                      
       ```
     - ___git merge-rebase___
       ```bash

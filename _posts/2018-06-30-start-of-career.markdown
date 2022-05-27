@@ -4,6 +4,7 @@ title: "程序员生涯的启航"
 date: 2018-06-30 21:54:45 +0800
 description: start of career
 img:  # Add image post (optional)
+tags: 心路历程
 ---
 
 # 我的成长之路
