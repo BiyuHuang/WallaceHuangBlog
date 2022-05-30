@@ -31,6 +31,10 @@ img:  # Add image post (optional)
       find . -maxdepth 5 -mindepth 2 -type f -name "*.csv" | xargs -n1 dirname | sort -u
       find . -maxdepth 2 -type f -name "*.dat" -exec chmod 644 {} \;
       ```
+    - ___bash___
+      ```bash
+      bash -c "java -version"
+      ```
 - __npm__ related
     - ___install___
       ```bash
