@@ -91,7 +91,7 @@ tags: BigData
    </project>
    ```
    [Reference documentation](https://davidb.github.io/scala-maven-plugin/example_java.html)
-2. Execute shell within maven project. Add `exec-maven-plugin` to `pom.xl`
+2. Execute shell within maven project. Add `exec-maven-plugin` into `pom.xl`
    ```xml
    <plugin>
         <artifactId>exec-maven-plugin</artifactId>
@@ -113,3 +113,61 @@ tags: BigData
         </executions>
    </plugin>
    ```
+   
+3. Use `maven-assembly-plugin` to make a single distributable archive.
+   1. add `maven-assembly-plugin` into `pom.xml`
+      ```xml
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <executions>
+              <execution>
+                  <id>assembly</id>
+                  <phase>package</phase>
+                  <goals>
+                      <goal>single</goal>
+                  </goals>
+                  <configuration>
+                      <descriptors> <!-- A list of descriptor files to generate from. -->
+                          <descriptor>assembly.xml</descriptor>
+                      </descriptors>
+                      <finalName>${project.artifactId}</finalName> <!-- The filename of the assembled distribution file. -->
+                  </configuration>
+              </execution>
+          </executions>
+      </plugin>
+      ```
+   2. add `assembly.xml` into project
+      ```xml
+      <assembly>
+          <id>assembly</id> <!-- this property will be part of the finalName as suffix -->
+          <formats>
+              <format>zip</format>
+          </formats>
+          <fileSets>
+              <fileSet>
+                  <!-- Configuration files to be placed in conf/ -->
+                  <directory>src/main/resources</directory>
+                  <outputDirectory>conf</outputDirectory>
+                  <includes>
+                      <include>*.properties</include>
+                      <include>*.config</include>
+                  </includes>
+              </fileSet>
+          </fileSets>
+          <files>
+              <!-- File in lib -->
+              <file>
+                  <source>target/${project.artifactId}-${project.version}.jar</source>
+                  <destName>demo-1.0.0-SNAPSHOT.jar</destName>
+                  <outputDirectory>lib</outputDirectory>
+              </file>
+              <file>
+                  <source>deploy.sh</source>
+                  <destName>deploy.sh</destName>
+                  <fileMode>0755</fileMode>
+                  <outputDirectory>.</outputDirectory>
+              </file>
+          </files>
+      </assembly>
+      ```
