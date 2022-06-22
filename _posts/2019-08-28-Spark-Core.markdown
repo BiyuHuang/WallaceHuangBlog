@@ -15,7 +15,11 @@ tags: BigData
       --conf spark.master=yarn \ 
       --conf spark.submit.deployMode=cluster \ 
       --conf spark.yarn.maxAppAttempts=1 \ 
-      --conf spark.yarn.queue=${YARN_QUEUE} \ 
+      --conf spark.yarn.queue=${YARN_QUEUE} \
+      --conf spark.dynamicAllocation.enabled=true \
+      --conf spark.dynamicAllocation.maxExecutors=20 \
+      --conf spark.dynamicAllocation.minExecutors=1 \
+      --conf spark.dynamicAllocation.initialExecutors=1 \ 
       --conf spark.task.cpus=1 \ 
       --conf spark.executor.cores=1 \ 
       --conf spark.driver.memory=1g \ 
