@@ -15,9 +15,9 @@ img:  # Add image post (optional)
       git push origin YOUR_BRANCH # normal push commits
       git push origin YOUR_BRANCH --force # force option will rewrite commit history                                      
       ```
-    - ___git merge-rebase___
+    - ___git merge-base___
       ```bash
-      fork_point=$(git merge-rebase --fork-point origin/master YOUR_BRANCH)
+      fork_point=$(git merge-base --fork-point origin/master YOUR_BRANCH)
       git rebase --onto origin/master $fork_point YOUR_BRANCH
       ```
     - ___git rebase___
