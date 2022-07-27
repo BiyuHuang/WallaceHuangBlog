@@ -40,3 +40,21 @@ img:  # Add image post (optional)
       ```bash
       npm install
       ```
+      
+- __s3__ related
+    - ___list objects___
+      ```bash
+      aws s3api --endpoint {ENDPOINT} list-objects --bucket {BUCKET_NAME}
+      ```
+    - ___get object___
+      ```bash
+      aws s3api --endpoint {ENDPOINT} get-object --bucket {BUCKET_NAME} --key {KEY_NAME} {TARGET_FILE}
+      ```
+    - ___put object___
+      ```bash
+      aws s3api --endpoint {ENDPOINT} put-object --bucket {BUCKET_NAME} --key {KEY_NAME} --body {TO_BE_UPLOADED_SOURCE}
+      ```
+    - ___delete object___
+      ```bash
+      aws s3api --endpoint {ENDPOINT} delete-object --bucket {BUCKET_NAME} --key {TO_BE_DELETED_KEY}
+      ```
