@@ -58,3 +58,9 @@ img:  # Add image post (optional)
       ```bash
       aws s3api --endpoint {ENDPOINT} delete-object --bucket {BUCKET_NAME} --key {TO_BE_DELETED_KEY}
       ```
+
+- __redis__ related
+    - ___del keys by batch___
+    ```bash
+    redis-cli --scan --pattern "key-prefix-*" | xargs -L 2000 redis-cli del
+    ``` 
