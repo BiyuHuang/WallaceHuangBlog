@@ -61,6 +61,12 @@ img:  # Add image post (optional)
 
 - __redis__ related
     - ___del keys by batch___
-    ```bash
-    redis-cli --scan --pattern "key-prefix-*" | xargs -L 2000 redis-cli del
-    ``` 
+      ```bash
+      redis-cli --scan --pattern "key-prefix-*" | xargs -L 2000 redis-cli del
+      ``` 
+
+- __curl__ related
+    - ___query public IP address___  
+      ```bash
+      curl ip.sb
+      ```
