@@ -70,3 +70,7 @@ img:  # Add image post (optional)
       ```bash
       curl ip.sb
       ```
+    - ___no-check-certificate___
+      ```bash
+      curl 'https://www.google.com' -k
+      ```
