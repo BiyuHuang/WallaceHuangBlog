@@ -74,3 +74,8 @@ img:  # Add image post (optional)
       ```bash
       curl 'https://www.google.com' -k
       ```
+- __dd__ related
+    - ___random token___
+      ```bash
+      dd if=/dev/urandom bs=128 count=1 2>/dev/null |base64 |tr -d "=+/" |dd bs=32 count=1 2>/dev/null
+      ```
