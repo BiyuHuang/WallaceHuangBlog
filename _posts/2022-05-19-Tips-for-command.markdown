@@ -25,6 +25,11 @@ img:  # Add image post (optional)
       git rebase -i head~n # rebase form number n commits before head
       git rebase -i --root # rebase from the root of BRANCH
       ```
+    - ___git config___
+      ```bash
+      git config --global alias.cb "branch --show-current" # set alias
+      git config --global --unset alias.cb  # unset alias
+      ```
 - __bash__ related
     - ___find___
       ```bash

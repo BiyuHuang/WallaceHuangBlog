@@ -24,6 +24,8 @@ tags: BigData
       --conf spark.executor.cores=1 \ 
       --conf spark.driver.memory=1g \ 
       --conf spark.yarn.tags=${USER_TAGS} \ 
+      --conf spark.files.maxPartitionBytes=128m \
+      --conf spark.sql.files.maxPartitionBytes=128m \
       --conf spark.executor.instances=5 \ 
       --conf spark.executor.memory=4g \ 
       --conf spark.executor.memoryOverhead=1g
