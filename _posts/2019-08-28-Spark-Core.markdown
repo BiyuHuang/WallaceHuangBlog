@@ -28,7 +28,7 @@ tags: BigData
       --conf spark.sql.files.maxPartitionBytes=128m \
       --conf spark.executor.instances=5 \ 
       --conf spark.executor.memory=4g \ 
-      --conf spark.executor.memoryOverhead=1g
+      --conf spark.executor.memoryOverhead=1g \
       --conf spark.sql.files.mergeSmallFile.enabled=true \
       --conf spark.sql.files.mergeSmallFile.maxBytes=268435456 \
       --packages com.google.protobuf:protobuf-java:3.6.0 \ 
