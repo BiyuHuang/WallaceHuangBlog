@@ -20,7 +20,7 @@ tags: BigData
    ```
    - ___kafka-console-producer.sh with SASL___
    ```bash
-   kafka-console-consumer.sh --broker-list BROKERS --topic TOPIC --producer.config producer.properties
+   kafka-console-producer.sh --broker-list BROKERS --topic TOPIC --producer.config producer.properties
    ```
    - ___kafka-console-consumer.sh with SASL___
    ```bash
