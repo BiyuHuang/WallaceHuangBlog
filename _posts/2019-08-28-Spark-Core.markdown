@@ -26,6 +26,7 @@ tags: BigData
       --conf spark.yarn.tags=${USER_TAGS} \ 
       --conf spark.files.maxPartitionBytes=128m \
       --conf spark.sql.files.maxPartitionBytes=128m \
+      --conf spark.sql.files.minPartitionNum= 1 \
       --conf spark.executor.instances=5 \ 
       --conf spark.executor.memory=4g \ 
       --conf spark.executor.memoryOverhead=1g \
@@ -38,4 +39,12 @@ tags: BigData
       {SPARK_APP_JAR}
     ```
 - 代码调优
+
 - jvm调优
+
+- 命令提示
+
+  - sync_partition_metadata 
+    ```bash 
+    CALL system.sync_partition_metadata(schema_name => 'data_base', table_name => 'table_name', mode => 'DROP', case_sensitive => false)
+    ```
