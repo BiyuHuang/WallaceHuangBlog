@@ -48,3 +48,39 @@ tags: BigData
     ```bash 
     CALL system.sync_partition_metadata(schema_name => 'data_base', table_name => 'table_name', mode => 'DROP', case_sensitive => false)
     ```
+  - __pyspark__ related
+      - ___virtual env___
+        ```bash
+        // Create virtual env under path /path/to/your/pyspark_venv
+        python3 -m venv /path/to/your/pyspark_venv
+        // Activate the virtual env
+        source /path/to/your/pyspark_venv/bin/activate
+        // Install library that user needed
+        pip3 install pyarrow pandas venv-pack
+        // package the venv
+        venv-pack -o pyspark_venv.tar.gz
+        ```
+      - ___pyspark submit___
+        ```bash
+        # cluster mode(spark-submit)
+        spark-submit --queue {YOUR_QUEUE} \
+        --deploy-mode cluster \
+        --archives "/path/to/your/pyspark_venv.tar.gz#environment" \
+        --conf spark.pyspark.python=./environment/bin/python3 \
+        user_job.py
+        
+        # client mode(spark-submit)
+        spark-submit --queue {YOUR_QUEUE} \
+        --deploy-mode client \
+        --archives "/path/to/your/pyspark_venv.tar.gz#environment" \
+        --conf spark.pyspark.python=./environment/bin/python3 \
+        --conf spark.pyspark.driver.python=/path/to/your/pyspark_venv/bin/python3 \
+        user_job.py
+        
+        # client mode(pyspark)
+        pyspark --queue {YOUR_QUEUE} \
+        --conf spark.pyspark.driver.python=/path/to/your/pyspark_venv/bin/python3 \
+        --conf spark.pyspark.python=./environment/bin/python3 \
+        --archives "/path/to/your/pyspark_venv.tar.gz#environment" \
+        user_job.py   
+        ```
