@@ -44,6 +44,16 @@ img:  # Add image post (optional)
       ```bash
       bash -c "java -version"
       ```
+    - ___lsof___
+      ```bash
+      # 查看TCP连接
+      lsof -p PID -nP | grep TCP
+      ```
+    - ___netstat___
+      ```bash
+      # 查看80端口连接
+      netstat -nat |grep -i "80"
+      ```
 - __npm__ related
     - ___install___
       ```bash
