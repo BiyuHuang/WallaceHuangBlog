@@ -8,6 +8,6 @@ tags: 心路历程
 ---
 
 # 我的成长之路
-- 进入大数据行业将近三年，从懵懂无知的小白成长为团队TL，这一路经历了很多，回想起过去三年，有太多的感慨，有太多的心路历程。突然想把自已的一些想法与感慨记录下来，总结过去、放眼未来。
-- 犹记得2015年硕士答辩前一周，我的导师把我叫到她跟前，当着所有师兄弟的面，对我大吼道："论文写的都是什么乱七八糟的，没有任何创新点，这样的论文能通过答辩吗？"。其实论文的好坏，真的不重要，重要的是学习能力与应用能力；可惜上学时未曾明白这个道理，走了好多弯路。所以在答辩时，我的内心其实就是一团乱麻，对自已的能力迷茫，对自已的未来迷茫。
-- 2015年7月31日入职目前所在公司，成为公司大数据项目中一名大数据研发工程师。这是我第一次找到一个明确的方向，弥漫在内心的浓雾，正在渐渐散去，看到了一路通向未来的路。当我找到了自已前进的方向时，整个人充满了动力与激情，我觉得刚入职那一段时间，是我人生中最为努力的一个时段。
+- Nearly three years into the big data industry, I have grown from a novice to a team TL, experiencing many ups and downs. Reflecting on the past, there are many emotions. 
+- In 2015, just before my master's thesis defense, my advisor criticized me in front of my peers for a lack of innovation in my thesis, leaving me uncertain about my abilities and future. I later realized that what truly matters is learning and practical skills.
+- In July 2015, I joined my current company as a big data development engineer. It was the first time I found a clear direction, and the fog in my heart began to lift. With newfound motivation and passion, I embarked on the most dedicated period of my life.
