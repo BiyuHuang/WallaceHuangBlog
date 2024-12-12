@@ -82,11 +82,13 @@ tags: Network
             "domainStrategy": "AsIs",
             "rules":
             [
-                // first rule: block Ads
+                // first rule: block Ads/CN/Private
                 {
                     "type": "field",
                     "domain":
                     [
+                        "geoip:cn",
+                        "geoip:private",                 
                         "geosite:category-ads-all"
                     ],
                     "outboundTag": "blocked"
