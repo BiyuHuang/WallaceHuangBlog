@@ -14,13 +14,15 @@ tags: Network
    # Install Warp
    apt install cloudflare-warp
    # Register device
-   warp-cli register
+   warp-cli registration new
    # Set warp mode
-   warp-cli set-mode warp
+   warp-cli mode warp
    # Set the listening port for WARP proxy
-   warp-cli set-proxy-port 40000
+   warp-cli proxy port 40000
    # Connect Warp
    warp-cli connect
+   # Warp Status
+   warp-cli status
    ```
 
 2. Verify warp service status
