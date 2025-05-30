@@ -7,8 +7,6 @@ img: igor-omilaev-gVQLAbGVB6Q-unsplash.jpg
 tags: Thoughts
 ---
 
-# Why Do We Still Choose Manual Work in an Automated World?
-
 *By a seasoned engineer tired of repetitive inefficiency*
 
 > “Anything that can be automated, should be automated.”  
