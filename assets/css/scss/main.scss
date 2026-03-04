@@ -13,7 +13,7 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   color: $body-color;
-  background-color: #fbfbfb;
+  background-color: $dark;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,6 +21,7 @@ body {
 
 h1 {
   font-weight: 400;
+  color: $white;
 }
 
 img {
@@ -39,11 +40,11 @@ img + em {
 }
 
 blockquote {
-  border-left: 5px solid #000;
+  border-left: 5px solid $nord3;
   padding-left: 1.1rem;
   margin-left: 1rem;
   font-style: italic;
-  color: #ada8a8;
+  color: $nord4;
 }
 
 pre {
@@ -65,32 +66,32 @@ pre {
 }
 
 table {
-  border: 1px solid #aaa;
-  background-color: #eee;
+  border: 1px solid $nord3;
+  background-color: $nord1;
   width: 100%;
   text-align: left;
   border-collapse: collapse;
+  color: $body-color;
 }
-table td, table.blueTable th {
-  border: 1px solid #aaa;
+table td, table th {
+  border: 1px solid $nord3;
   padding: 3px 2px;
 }
 table tbody td {
   font-size: 13px;
 }
 table tr:nth-child(even) {
-  background: #adbecc;
+  background: $nord2;
 }
 table thead {
-  background: #a9c4d1;
-  background: linear-gradient(to bottom, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
-  border-bottom: 1px solid #8c8c8c;
+  background: $nord10;
+  border-bottom: 1px solid $nord3;
 }
 table thead th {
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
-  border-left: 1px solid #d0e4f5;
+  color: $white;
+  border-left: 1px solid $nord3;
 }
 table thead th:first-child {
   border-left: none;
@@ -99,31 +100,30 @@ table thead th:first-child {
 table tfoot {
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
-  background: #d0e4f5;
-  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-  border-top: 2px solid #444;
+  color: $white;
+  background: $nord2;
+  border-top: 2px solid $nord3;
 }
 table tfoot td {
   font-size: 14px;
 }
 
 .wrapper {
-  max-width: 1250px;
+  max-width: 1500px;
   position: relative;
 }
 
 .post, .article-page {
-  background-color: #fff;
+  background-color: $lightgray;
 }
 
 ::-moz-selection {
-  background: rgba(38, 57, 89, 0.8);
+  background: rgba($nord9, 0.5);
   color: $white;
 }
 
 ::selection {
-  background: rgba(38, 57, 89, 0.8);
+  background: rgba($nord9, 0.5);
   color: $white;
 }
 

@@ -1,7 +1,35 @@
-$body-color: #515151;
-$white: #ffffff;
-$lightgray: #fafafa;
-$gray: #ecf0f1;
-$dark-gray: #a0a0a0;
-$dark-blue: #263959;
-$dark: #333030;
+// Nord Dark Theme Palette
+// https://www.nordtheme.com/
+
+// Polar Night (backgrounds)
+$nord0: #2e3440;
+$nord1: #3b4252;
+$nord2: #434c5e;
+$nord3: #4c566a;
+
+// Snow Storm (text)
+$nord4: #d8dee9;
+$nord5: #e5e9f0;
+$nord6: #eceff4;
+
+// Frost (accent blues)
+$nord7: #8fbcbb;
+$nord8: #88c0d0;
+$nord9: #81a1c1;
+$nord10: #5e81ac;
+
+// Aurora (semantic colors)
+$nord11: #bf616a;
+$nord12: #d08770;
+$nord13: #ebcb8b;
+$nord14: #a3be8c;
+$nord15: #b48ead;
+
+// Semantic aliases
+$body-color: $nord4;
+$white: $nord6;
+$lightgray: $nord1;
+$gray: $nord2;
+$dark-gray: $nord3;
+$dark-blue: $nord8;
+$dark: $nord0;

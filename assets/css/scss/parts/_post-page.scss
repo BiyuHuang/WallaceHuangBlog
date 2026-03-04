@@ -1,5 +1,6 @@
 .wrap-content {
   padding: 20px;
+  color: $body-color;
 }
 
 .header-page {
@@ -9,9 +10,10 @@
     font-weight: 400;
     margin: 0 0 10px;
     line-height: 1.3;
+    color: $white;
   }
   .page-date {
-    color: $dark-gray;
+    color: $nord9;
     font-weight: 300;
     font-size: 12px;
     text-transform: uppercase;
@@ -41,8 +43,9 @@
     font-size: 10px;
   }
   .page-image {
+    object-fit: fill;
     width: 100%;
-    height: 100%;
+    height: 300px;
   }
 }
 
@@ -59,11 +62,11 @@
     a {
       display: inline-block;
       text-decoration: none;
-      background-color: $lightgray;
-      border: 1px solid $gray;
+      background-color: $dark;
+      border: 1px solid $dark-gray;
       padding: 5px 10px;
       margin-left: 5px;
-      color: $dark-blue;
+      color: $body-color;
       font-size: 12px;
       transition: background-color .3s;
       &:first-child {

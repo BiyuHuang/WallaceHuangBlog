@@ -1,6 +1,6 @@
 .blog-tags {
   width: 100%;
-  background-color: $white;
+  background-color: $dark;
   padding: 0 20px 20px;
   h1 {
     font-size: 30px;
@@ -23,7 +23,7 @@
     list-style: none;
     a {
       text-decoration: none;
-      color: $dark-blue;
+      color: $body-color;
       display: inline-block;
       padding: 5px 10px;
       border: 1px solid $gray;
