@@ -1,10 +1,9 @@
 ---
-layout: post
 title: "Tips for command"
 date: 2022-05-19 14:35:05 +0800
 description: Tips for command
-tags: BigData
-img:  # Add image post (optional)
+tags: [BigData]
+categories: [Tech]
 ---
 
 # Tips for command

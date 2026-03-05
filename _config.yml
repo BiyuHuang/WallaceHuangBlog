@@ -1,36 +1,109 @@
+theme: jekyll-theme-chirpy
+
+lang: en
+
+timezone: Asia/Singapore
+
 title: Wallace Huang
-description: Blog # > this means to ignore newlines until "baseurl:"
-permalink: ':title/'
-baseurl: "/WallaceHuangBlog" # the subpath of your site, e.g. /blog
-url: "https://biyuhuang.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-site-twitter: #if your site has a twitter account, enter it here
+tagline: R&D engineer. Go big or go home!
 
-# Author Settings
-author: Biyu Huang # add your name
-author-img: profile.jpg # add your photo
-about-author: R&D engineer. Go big or go home! # add description
-social-twitter: h417652303 # add your Twitter handle
-social-facebook: huangbiyu # add your Facebook handle
-social-github: BiyuHuang # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: h417652303@gmail.com # add your Email address
+description: >-
+  Personal tech blog by Biyu Huang — Big Data, DevOps, and engineering thoughts.
 
-# Disqus
-# discus-identifier: wallacehuang # add your discus identifier
+url: "https://biyuhuang.github.io"
+baseurl: "/WallaceHuangBlog"
 
-# Tracker
-analytics: 156547412 # Google Analytics
+github:
+  username: BiyuHuang
 
-# Build Settings
-markdown: kramdown
-plugins:
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jemoji
+twitter:
+  username: h417652303
 
-paginate: 8
-paginate_path: "/page/:num"
+social:
+  name: Biyu Huang
+  email: h417652303@gmail.com
+  links:
+    - https://github.com/BiyuHuang
 
-exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+analytics:
+  google:
+    id: "156547412"
 
-theme: jekyll-theme-midnight
+theme_mode: # empty = follow system, with toggle
+
+avatar: /assets/img/profile.jpg
+
+toc: true
+
+comments:
+  provider: # [disqus | utterances | giscus]
+
+paginate: 10
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - "*.config.js"
+  - "package*.json"
+  - scripts
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/

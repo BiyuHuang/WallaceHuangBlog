@@ -1,10 +1,10 @@
 ---
-layout: post
 title: "How to use warp"
 date: 2024-10-14 10:39:00 +0800
 description: How to use warp
-img: warp.png
-tags: Network
+image: /assets/img/warp.png
+tags: [Network]
+categories: [Tech]
 ---
 
 # How to use warp

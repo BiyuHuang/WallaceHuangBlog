@@ -1,10 +1,10 @@
 ---
-layout: post
 title: "Why Do We Still Choose Manual Work in an Automated World?"
 date: 2025-05-30 10:19:00 +0800
 description: Why Do We Still Choose Manual Work in an Automated World?
-img: igor-omilaev-gVQLAbGVB6Q-unsplash.jpg
-tags: Thoughts
+image: /assets/img/igor-omilaev-gVQLAbGVB6Q-unsplash.jpg
+tags: [Thoughts]
+categories: [Tech]
 ---
 
 *By a seasoned engineer tired of repetitive inefficiency*

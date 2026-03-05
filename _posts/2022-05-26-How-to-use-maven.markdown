@@ -1,10 +1,10 @@
 ---
-layout: post 
 title: "How to use maven"
-date: 2022-05-26 14:30:05 +0800 
-description: How to use maven 
-img: maven-logo-black-on-white.png 
-tags: BigData
+date: 2022-05-26 14:30:05 +0800
+description: How to use maven
+image: /assets/img/maven-logo-black-on-white.png
+tags: [BigData]
+categories: [Tech]
 ---
 
 # How to use maven
