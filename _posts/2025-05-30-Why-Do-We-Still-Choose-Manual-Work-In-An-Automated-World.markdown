@@ -1,169 +1,180 @@
 ---
 title: "Why Do We Still Choose Manual Work in an Automated World?"
 date: 2025-05-30 10:19:00 +0800
-description: Why Do We Still Choose Manual Work in an Automated World?
+description: An engineer's analysis of why organizations default to manual processes despite abundant automation tools — and a framework for breaking the cycle.
 image: /assets/img/igor-omilaev-gVQLAbGVB6Q-unsplash.jpg
 tags: [Thoughts]
 categories: [Tech]
 ---
 
-*By a seasoned engineer tired of repetitive inefficiency*
+*Written by Biyu Huang, with [Cursor](https://www.cursor.com/) as co-author.*
 
-> “Anything that can be automated, should be automated.”  
-> — I’ve said this for years, yet I still find myself manually filling out Excel sheets.
-
----
-
-## Introduction
-
-After over a decade in software engineering, one truth remains painfully clear:  
-**Given the choice between automation and manual effort, most teams still choose the latter.**
-
-This isn’t due to a lack of tools or technical capability. We have CI/CD pipelines, RPA bots, low-code platforms, APIs, and scripting languages at our fingertips. And yet—despite the tools—many routine tasks, like data entry, reporting, and daily operational workflows, remain **shockingly human-dependent**.
-
-And I find that absurd.
-
-In this post, I’ll break down why this keeps happening, share some real-world automation case studies, and make the argument that the root cause isn’t technical at all—it’s cultural.
+> "Anything that can be automated, should be automated."  
+> — I've said this for years, yet I still find myself manually filling out Excel sheets.
 
 ---
 
-## 1. Laziness Is the Enemy of Good Engineering
+## The Paradox
 
-You know the scenario:  
-A teammate says, *“Yeah, I’ll automate this when I get a chance.”*  
-Six months later, they’re still doing it manually—copy-pasting data every week like clockwork.
+After over a decade in software engineering, one truth remains painfully clear: **given the choice between automation and manual effort, most teams still choose the latter.**
 
-The real issue isn’t capability. It’s comfort.  
-Manual work feels faster in the moment. No need to learn a new tool. No need to plan or document. It’s the **path of least resistance**, even if it wastes hours every month.
+This isn't 2005. We have CI/CD pipelines, RPA bots, workflow engines, low-code platforms, and scripting languages at our fingertips. We work in an industry that literally builds automation for others. And yet — data entry, reporting, operational workflows, cross-team coordination — remain shockingly human-dependent.
 
-> Developers are supposed to be lazy in the right way—writing code once to avoid repetitive work forever.  
-> But too often, we’re lazy in the wrong way—just accepting inefficiency.
+The standard explanation is "laziness" or "resistance to change." But that's a surface-level answer. The real dynamics are more interesting — and more systemic — than that.
 
 ---
 
-## 2. The Technical Barrier Is a Myth
+## The Automation Decision Matrix
 
-In most teams, **the problem is not technical complexity**.  
-We’re fully capable of automating 80% of what we do:
+Not all manual work is irrational. To understand where the real waste lives, I use a simple framework:
 
-- Have SQL? Write a query.
-- Have APIs? Build an ETL.
-- Have logs? Stream them.
-- Have Python or Bash? Script it.
+|  | **Low Frequency** | **High Frequency** |
+|---|---|---|
+| **Low Complexity** | Leave manual | **Automate first** |
+| **High Complexity** | Evaluate case-by-case | Invest heavily |
 
-Yet somehow, “fill out this Google Sheet by Friday” becomes the de facto workflow.  
-Why? Because **no one takes ownership of making it better**.
+**High frequency + Low complexity** is where most waste lives. These are the tasks everyone agrees should be automated but nobody actually automates: weekly reports, data consolidation, environment setup, deployment checklists, status updates.
 
----
+**High complexity + Low frequency** is where the real debate happens. A quarterly compliance audit might take a week of manual work, but automating it requires understanding edge cases that only surface once a year. The automation might cost more than the manual work it replaces — *if you only count this quarter.* Over five years, the calculus flips.
 
-## 3. Process Culture: Fear Over Flow
-
-I once tried to automate a reporting workflow involving seven teams and a shared data mart. It took a few days to hook into APIs and build a unified dashboard. I was proud—until leadership said:
-
-> “Hmm… let’s keep manual confirmation. Automation feels risky.”
-
-Translation: *“I don’t want to be blamed if something breaks.”*
-
-This is how companies institutionalize manual labor. Not for rational reasons, but for cultural ones:
-
-- Manual work feels "safe."
-- Human-in-the-loop gives plausible deniability.
-- If a mistake happens, there’s always someone to blame.
-
-> **Automation breaks when your organization fears accountability more than it values efficiency.**
+The mistake most teams make: they evaluate automation ROI on a single-cycle basis instead of amortizing across the task's lifetime.
 
 ---
 
-## 4. “It’s Too Expensive to Automate” — Really?
+## Three Forces That Keep Teams Manual
 
-Let’s do the math.
+### 1. The Ownership Vacuum
 
-Imagine a weekly data consolidation task that takes three people one hour to complete. Over a year, that’s **150 hours**.
+Automation is infrastructure work. It benefits everyone but belongs to no one. In most organizations, there's no incentive to automate someone else's workflow — and no mandate to automate your own.
 
-I once built a script that automated such a task in 2 days. It would’ve paid for itself in under a month. Yet the team didn’t use it.
+The result: every team has a graveyard of "we should automate this" tickets that never get prioritized, because the product roadmap always wins.
 
-The excuse? *“We’re used to the old way.”*
+**The fix isn't motivational posters about efficiency.** It's structural: allocate explicit time for automation work. Google's famous "20% time" worked because it was a policy, not a suggestion. Even 10% — half a day per sprint dedicated to automation debt — changes the culture.
 
-Let that sink in:  
-**The ROI is obvious, but habit won.**
+### 2. The Accountability Trap
 
----
+I once built a dashboard that automated a reporting workflow across seven teams. It consolidated data from multiple sources, ran validations, and published results. I was proud — until leadership said:
 
-## 5. Real-World Automation in Action
+> "Let's keep manual confirmation. Automation feels risky."
 
-To contrast, here are some organizations that did the right thing:
+Translation: *"If a human made this mistake, we can blame someone. If a script made this mistake, we blame the system — which means we blame the person who built it."*
 
-### 🏢 Foshan City: RPA for Government Data Entry  
-- **Challenge:** Grid workers manually entered population data every quarter.  
-- **Solution:** RPA bots were deployed to mimic user actions.  
-- **Result:** Time reduced from 2–3 weeks to 1 week. Efficiency increased by 50%.  
-- [Read more](https://www.huaweicloud.com/zhishi/smart-18464706.html)
+This is the accountability trap: **manual processes survive because they distribute blame across many hands, while automated processes concentrate responsibility on whoever built the automation.**
 
----
+The paradox is that automated systems are typically *more reliable* than manual ones. Humans make inconsistent errors; scripts make consistent ones that are easier to detect and fix. But organizational incentives reward blame avoidance over error reduction.
 
-### 🧑‍🏫 Multi-level Form Submissions in Education  
-- **Challenge:** Teachers submitted forms to multi-tiered departments.  
-- **Solution:** A no-code platform (SeaTable) automated form collection and hierarchy approvals.  
-- **Result:** Less human involvement, cleaner data, clearer access control.  
-- [Read more](https://docs.seatable.cn)
+**Breaking through:** Frame automation as risk *reduction*, not risk *transfer*. Show error rates before and after. Make the case with data, not opinions.
 
----
+### 3. The Complexity Perception Gap
 
-### 📄 Invoice Processing in Corporate Finance  
-- **Challenge:** Staff submitted invoice information manually; QA was inconsistent.  
-- **Solution:** A rule-based system auto-validated and locked records post-submission.  
-- **Result:** Reduced errors, faster processing.  
-- [Read more](https://docs.seatable.cn)
+There's a persistent belief that automation requires sophisticated engineering: a dedicated platform, a team of developers, months of planning.
+
+For some workflows, that's true. But for the vast majority of manual busywork, the automation is embarrassingly simple:
+
+- 30-line Python script that merges three CSVs into a report
+- A cron job that triggers an API call every Monday
+- A webhook that posts a Slack notification when a Jira ticket changes status
+- A shell alias that replaces a 12-step deployment process
+
+The gap isn't technical capability — it's that people default to imagining the complex solution and never consider the simple one. **The first automation doesn't need to be perfect. It needs to exist.**
 
 ---
 
-### 🏭 BioTech Enterprise-Wide Data Platform  
-- **Challenge:** Slow data cycles, decentralized spreadsheets.  
-- **Solution:** A unified data center consolidated reports across sub-companies.  
-- **Result:** Shorter reporting cycles, consistent metrics.  
-- [Read more](https://www.fanruan.com/cases/view/?cid=332)
+## What I've Automated (And What I Learned)
+
+### Data Consolidation: 150 Hours → 0
+
+**Before:** Three people spent one hour each week consolidating data from multiple sources into a shared spreadsheet. Over a year: 150 person-hours.
+
+**After:** A Python script that ran via cron, pulled from APIs, merged the data, and pushed to a shared sheet. Built in 2 days.
+
+**What happened:** The team didn't adopt it for three months. Not because it didn't work — because they were "used to the old way." Adoption only happened when one of the three people went on leave and the remaining two couldn't keep up.
+
+**Lesson:** Automation adoption is often triggered by pain, not by the existence of a better solution. Sometimes you have to wait for the pain to arrive.
+
+### Cross-Team Reporting: Manual Alignment → Automated Pipeline
+
+**Before:** Every Monday, five teams independently compiled metrics and presented them in a meeting. Numbers frequently didn't match because teams used different source queries, date ranges, and definitions.
+
+**After:** A unified pipeline that pulled from a single source of truth, applied consistent definitions, and generated a report automatically. The meeting went from "arguing about whose numbers are right" to "discussing what the numbers mean."
+
+**Lesson:** The highest-value automation isn't saving time — it's **eliminating ambiguity.** When you remove the human interpretation layer from data collection, you remove the source of most disagreements.
+
+### Requirement-to-Code: The Agent Frontier
+
+**Before:** A PM writes a requirement on Confluence. I read it, manually extract metrics, validate table names against our data catalog, design the schema, write SparkSQL, test it, and publish the template. This takes a full day of context-switching.
+
+**After:** An LLM-powered agent reads the Confluence page, parses the requirement into a structured spec, validates table names via API, generates the SQL template following our team's conventions, optimizes it, and publishes the result. I review and approve. This takes 30 minutes.
+
+**Lesson:** We've entered a new era where automation doesn't just handle repetitive tasks — it handles *cognitive* tasks. The agent doesn't replace the engineer; it handles the mechanical parts of engineering (parsing, validating, generating boilerplate) so the engineer can focus on the parts that require judgment.
 
 ---
 
-### 🧪 Minghoutian Data Reporting Platform  
-- **Challenge:** Scattered databases and manual collection.  
-- **Solution:** A platform mimicking Excel UI with structured template and batch import/export support.  
-- **Result:** Accurate, large-scale, traceable data submissions.  
-- [Read more](https://www.grapecity.com.cn/casestudies/mhtgf)
+## Case Studies: Organizations That Got It Right
+
+### Government Data Entry → RPA
+
+Foshan City grid workers manually entered population data every quarter — a process that took 2-3 weeks. They deployed RPA bots that mimicked user actions, reducing the cycle to 1 week (50% improvement).
+
+**Key insight:** RPA works best when the existing process is already well-defined with clear UI steps. The bot follows the same path a human would — just faster and without fatigue.
+
+### Corporate Finance → Rule-Based Validation
+
+A finance team processed invoices manually with inconsistent QA. They implemented a rule-based system that auto-validated fields on submission and locked records post-approval.
+
+**Key insight:** Automation doesn't always mean "no humans." Here, humans still submitted invoices — but the validation was instant and consistent instead of delayed and inconsistent. The sweet spot is often **human input + automated validation**.
+
+### Enterprise Data Platform → Single Source of Truth
+
+A biotech company had decentralized spreadsheets across subsidiaries, leading to slow reporting cycles and inconsistent metrics. They consolidated into a unified data platform.
+
+**Key insight:** The automation wasn't the technology — it was the *organizational decision* to standardize. The hardest part wasn't building the platform; it was getting five business units to agree on definitions.
 
 ---
 
-## 6. The Root Problem: Nobody Actually Cares Enough
+## The Cultural Root Cause
 
-We’re not short on tools.  
-We’re short on people who give a damn.
+Tools aren't the bottleneck. Culture is.
 
-- Tools like RPA, Airflow, Make, Zapier, SeaTable, and even simple Python scripts can solve 90% of daily inefficiencies.
-- But none of that matters if the default attitude is: *“Let’s not rock the boat.”*
+Every example above has a common thread: **automation succeeds when someone with authority decides the status quo is unacceptable.** It fails when the default attitude is *"let's not rock the boat."*
 
-Automation requires initiative, ownership, and a willingness to disrupt the status quo.
+The forces that sustain manual work are:
 
-Without that, you can introduce any new platform, and it’ll still be bypassed with Excel + Email.
+- **Habit**: "We've always done it this way" is the most expensive sentence in business
+- **Risk aversion**: Fear of new failure outweighs frustration with existing inefficiency
+- **Misaligned incentives**: Nobody gets promoted for saving 150 hours of data entry
+- **Short-term thinking**: "I'll automate it next sprint" — for the 47th consecutive sprint
+
+Breaking through requires making the cost of manual work *visible*. Track it. Quantify it. Present it in every retrospective. Make the waste impossible to ignore.
+
+---
+
+## A Framework for Action
+
+If you're frustrated by manual work on your team, here's a concrete approach:
+
+1. **Inventory**: List every recurring task that involves copy-pasting, data entry, or manual coordination. Be specific — "weekly data consolidation" not "reporting."
+
+2. **Classify**: Use the automation matrix above. Prioritize high-frequency, low-complexity tasks.
+
+3. **Prototype**: Build the simplest possible automation. A script, a cron job, a webhook. Don't design a platform — solve one problem.
+
+4. **Demonstrate**: Show it working. Show the time saved. Show the errors eliminated. Don't ask permission; show results.
+
+5. **Iterate**: Once people see one workflow automated, they start asking "can we do this for X too?" That momentum is self-sustaining.
 
 ---
 
 ## Final Thoughts
 
-The biggest threat to progress isn’t bad code or legacy systems.
+The biggest threat to engineering productivity isn't bad code or legacy systems.
 
-It’s **cultural entropy**:  
-> The quiet, creeping rot of “we’ve always done it this way.”
+It's **cultural entropy**: the quiet, creeping normalization of inefficiency.
 
-So ask yourself (and your team):
+The engineers who make the biggest impact aren't always the ones writing the most clever algorithms. Often, they're the ones who look at a manual process that everyone has accepted as "just how things are" and say: **"Why? And what if we didn't?"**
 
-- Why are we still doing this manually?
-- Who benefits from the status quo?
-- What’s stopping us from investing a few days to save hundreds of hours?
-
-If the answer is “nothing but habit”—it’s time to break the habit.
+If you're still manually entering data in 2025, you're not in a modern workplace. You're in a digital sweatshop — and the exit is already built. You just have to walk through it.
 
 ---
 
-**Because if you’re still manually entering data in 2025,  
-you’re not in a modern workplace.  
-You’re in a digital sweatshop.**
+*What manual processes are you tolerating on your team? I'd love to hear your war stories. Find me on [GitHub](https://github.com/BiyuHuang).*
