@@ -6,7 +6,7 @@ tags: [源码分析, 架构设计, TypeScript, Claude Code]
 
 # Claude Code 源码深度剖析：架构分析与学习指南
 
-> 本文是对 Claude Codename "Tengu" 源码的深入分析，从架构设计到核心模块实现，带你系统学习这个复杂的 AI 编码助手项目。
+> 本文是对 Claude Code "Tengu" 源码的深入分析，从架构设计到核心模块实现，带你系统学习这个复杂的 AI 编码助手项目。
 
 ## 目录
 
